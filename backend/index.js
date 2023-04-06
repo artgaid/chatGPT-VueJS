@@ -1,6 +1,7 @@
-const express = require("express");
-const logger = require("morgan");
-const cors = require("cors");
+import express from "express";
+import logger from "morgan";
+import cors from "cors";
+
 const app = express();
 
 // app.set();
@@ -20,7 +21,7 @@ app.use(express.urlencoded({ extended: true }));
 
 app.get("/", (req, res) => {
   console.log("ROOT");
-  res.send("OK");
+  res.send("OKAY");
 });
 
 // http://localhost:3001 -- наш хост
