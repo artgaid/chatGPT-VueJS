@@ -1,0 +1,78 @@
+.stroke {
+
+  &-none {
+    stroke: none;
+  }
+  &-current {
+    stroke: currentColor;
+  }
+  &-transparent {
+    stroke: transparent;
+  }
+
+  &-0 {
+    stroke-width: 0;
+  }
+  &-1 {
+    stroke-width: 1;
+  }
+  &-2 {
+    stroke-width: 2;
+  }
+
+  &-wht {
+    stroke: $WHT;
+  }
+  &-lllgr {
+    stroke: $LLLGR;
+  }
+  &-llgr {
+    stroke: $LLGR;
+  }
+  &-wbl1 {
+    stroke: $WBL1;
+  }
+  &-lgr {
+    stroke: $LGR;
+  }
+  &-wrd {
+    stroke: $WRD;
+  }
+  &-wgr {
+    stroke: $WGR;
+  }
+  &-wyl {
+    stroke: $WYL;
+  }
+  &-yl {
+    stroke: $YL;
+  }
+  &-gr {
+    stroke: $GR;
+  }
+  &-gr1 {
+    stroke: $GR1;
+  }
+  &-gr2 {
+    stroke: $GR2;
+  }
+  &-dg {
+    stroke: $DG;
+  }
+  &-gr3 {
+    stroke: $GR3;
+  }
+  &-blc {
+    stroke: $BLC;
+  }
+
+  &-bl {
+    stroke: $BL;
+  }
+  &-red {
+    stroke: $RD;
+  }
+  &-grn {
+    stroke: $GRN;
+  }
+}

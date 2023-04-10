@@ -1,0 +1,67 @@
+.border {
+  border-color: $BLC;
+
+  &-inherit {
+    border-color: inherit;
+  }
+  &-current {
+    border-color: currentColor;
+  }
+  &-transparent {
+    border-color: transparent;
+  }
+
+
+  &-wht {
+    border-color: $WHT;
+  }
+  &-lllgr {
+    border-color: $LLLGR;
+  }
+  &-llgr {
+    border-color: $LLGR;
+  }
+  &-wbl1 {
+    border-color: $WBL1;
+  }
+  &-lgr {
+    border-color: $LGR;
+  }
+  &-wrd {
+    border-color: $WRD;
+  }
+  &-wgr {
+    border-color: $WGR;
+  }
+  &-wyl {
+    border-color: $WYL;
+  }
+  &-yl {
+    border-color: $YL;
+  }
+  &-gr {
+    border-color: $GR;
+  }
+  &-gr1 {
+    border-color: $GR1;
+  }
+  &-gr2 {
+    border-color: $GR2;
+  }
+  &-dg {
+    border-color: $DG;
+  }
+  &-gr3 {
+    border-color: $GR3;
+  }
+
+  &-bl {
+    border-color: $BL;
+  }
+  &-red {
+    border-color: $RD;
+  }
+  &-grn {
+    border-color: $GRN;
+  }
+}

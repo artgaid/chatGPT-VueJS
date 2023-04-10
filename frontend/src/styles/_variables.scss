@@ -1,0 +1,77 @@
+//colors
+
+// --- WHITE ---
+$WHT: #ffffff;
+$LLLGR: #FAFAFA;
+$LLGR: #F5F5F5;
+$WBL1: #E7EFFF;
+$LGR:  #ECECEC;
+$WRD: #FBECEB;
+$WGR:  #D1F1E2;
+$WYL: #FFF4D9;
+$YL: #FFEFC5;
+$GR: #C2C2C2;
+$GR1: #989898;
+$GR2: #535353;
+$DG:  #626262;
+$GR3: #333333;
+$BLC: #000000;
+
+// --- BLUE ---
+$BL10: #CFE0FF;
+$BL9: #AFCBFF;
+$BL8: #87B1FF;
+$BL7:#5F96FE;
+$BL6: #377CFE;
+$WBL: #2772FE;
+$BL: #0F62FE;
+$DBL: #0D58E4;
+$DDBL: #0B48B8;
+$BL5: #0D52D4;
+$BL4: #0A41A9;
+$BL3: #08317F;
+$BL2: #052155;
+$BL1: #031433;
+
+// --- RED ---
+$RD10: #F7D9D7;
+$RD9: #F2C0BC;
+$RD8: #ECA19B;
+$RD7: #E68179;
+$RD6: #DF6258;
+$RD:  #D94236;
+$DRD: #D33225;
+$RD5: #B5372D;
+$RD4: #912C24;
+$RD3: #6D211B;
+$RD2: #481612;
+$RD1: #2B0D0B;
+
+// --- GREEN ---
+$GRN10: #D1F1E2;
+$GRN9: #B3E8CF;
+$GRN8: #8DDDB7;
+$GRN7: #66D29E;
+$GRN6: #40C686;
+$GRN: #1ABB6E;
+$DGRN: #14AE64;
+$GRN5: #169C5C;
+$GRN4: #117D49;
+$GRN3: #0D5E37;
+$GRN2: #093E25;
+$GRN1: #052516;
+
+//height
+$main-height: calc(100vh - 78px - 71px);
+$header-height: 78px;
+$footer-height: 71px;
+
+//animation
+$transition-animation: all 0.3s ease;
+$transition-recording: all 0.5s ease;
+
+//box-shadow
+$box-shadow-normal: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 0px 2px rgba(0, 0, 0, 0.06), 0px 0px 1px rgba(0, 0, 0, 0.04);
+$box-shadow-super: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 0px 2px rgba(0, 0, 0, 0.06), 0px 0px 1px rgba(0, 0, 0, 0.04), 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 0px 2px rgba(0, 0, 0, 0.06), 0px 0px 1px rgba(0, 0, 0, 0.04);
+
+$filter-super: drop-shadow(0px 4px 8px rgba(0, 0, 0, 0.04)) drop-shadow(0px 0px 2px rgba(0, 0, 0, 0.06)) drop-shadow(0px 0px 1px rgba(0, 0, 0, 0.04)) drop-shadow(0px 4px 8px rgba(0, 0, 0, 0.04)) drop-shadow(0px 0px 2px rgba(0, 0, 0, 0.06)) drop-shadow(0px 0px 1px rgba(0, 0, 0, 0.04));

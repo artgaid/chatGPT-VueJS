@@ -1,0 +1,69 @@
+.fill {
+
+  &-none {
+    fill: none;
+  }
+  &-current {
+    fill: currentColor;
+  }
+  &-transparent {
+    fill: transparent;
+  }
+
+
+  &-wht {
+    fill: $WHT;
+  }
+  &-lllgr {
+    fill: $LLLGR;
+  }
+  &-llgr {
+    fill: $LLGR;
+  }
+  &-wbl1 {
+    fill: $WBL1;
+  }
+  &-lgr {
+    fill: $LGR;
+  }
+  &-wrd {
+    fill: $WRD;
+  }
+  &-wgr {
+    fill: $WGR;
+  }
+  &-wyl {
+    fill: $WYL;
+  }
+  &-yl {
+    fill: $YL;
+  }
+  &-gr {
+    fill: $GR;
+  }
+  &-gr1 {
+    fill: $GR1;
+  }
+  &-gr2 {
+    fill: $GR2;
+  }
+  &-dg {
+    fill: $DG;
+  }
+  &-gr3 {
+    fill: $GR3;
+  }
+  &-blc {
+    fill: $BLC;
+  }
+
+  &-bl {
+     fill: $BL;
+  }
+  &-red {
+    fill: $RD;
+  }
+  &-grn {
+    fill: $GRN;
+  }
+}

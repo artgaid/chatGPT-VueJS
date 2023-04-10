@@ -1,29 +1,36 @@
 <template>
-  <main>
-    <h1>HOME</h1>
-    <div class="chat__container"></div>
-    <form class="chat__form" @submit.prevent="fetchAnswer">
-      <textarea v-model="question" placeholder="Ask VueChatGPT" />
-      <button type="submit">Submit</button>
-    </form>
+  <main class="container py-24">
+    <div class="border rounded w-full h-full">
+      <div>Answer</div>
+      <div>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. A commodi doloribus, earum eius
+          est et eum explicabo fugiat harum laudantium maxime modi necessitatibus nemo optio
+          possimus quaerat, quidem tenetur voluptatibus!
+        </p>
+        <div v-for="choice in answer.choices" :key="choice.index">{{ choice.message.content }}</div>
+      </div>
+    </div>
+    <TheFormRequest />
   </main>
 </template>
 
 <script setup lang="ts">
 import { ref } from 'vue'
-import axios from 'axios'
+import type { AnswerType } from '@/types/answer.type'
+import TheFormRequest from '@/components/TheFormRequest.vue'
 
-const question = ref('')
-
-const fetchAnswer = async () => {
-  console.log(question.value, ':fetchAnswer')
-  const res = await axios.get('http://localhost:3001/').then((res) => res.data)
-  console.log(res, ':res')
-}
+const answer = ref({} as AnswerType)
 </script>
 
 <style lang="scss" scoped>
-h1 {
-  color: blueviolet;
+main {
+  width: 100%;
+  height: 100%;
+
+  display: grid;
+  align-items: start;
+  justify-items: start;
+  grid-gap: 10px;
 }
 </style>

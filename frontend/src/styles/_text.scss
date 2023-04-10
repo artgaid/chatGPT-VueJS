@@ -1,0 +1,167 @@
+:root {
+  --font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Oxygen', 'Ubuntu', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+}
+
+body {
+  color: var(--color-text);
+  text-rendering: optimizeLegibility;
+  font-family: var(--font-family);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0.2px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-family);
+  font-feature-settings: 'pnum' on, 'lnum' on;
+  font-style: normal;
+  font-weight: normal;
+  margin: 0;
+}
+
+h1 {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 22px;
+  letter-spacing: 0.2px;
+}
+
+p {
+  margin: 0;
+}
+b,
+strong {
+  font-weight: bolder;
+}
+
+input {
+  font-feature-settings: 'pnum' on, 'lnum' on;
+}
+
+
+.text {
+  &-h0 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 24px;
+    letter-spacing: 0.2px;
+  }
+
+  &-h1 {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 22px;
+    letter-spacing: 0.2px;
+  }
+
+  &-bold {
+    font-weight: 600;
+  }
+  &-medium {
+    font-weight: 500;
+  }
+
+  &-mini {
+    font-style: normal;
+    font-size: 13px;
+    line-height: 18px;
+    letter-spacing: 0.2px;
+  }
+
+  &-small-caption {
+    font-size: 12px;
+  }
+
+  &-small-caption-bold {
+    font-weight: 700;
+  }
+
+  &-ultra-small {
+    font-size: 10px;
+  }
+
+  &-color {
+    &-wht {
+      color: $WHT
+    }
+
+    &-gr {
+      color: $GR;
+    }
+    &-gr1 {
+      color: $GR1;
+    }
+    &-gr3 {
+      color: $GR3;
+    }
+    &-bl {
+      color: $BL;
+    }
+    &-red {
+      color: $RD;
+    }
+    &-green {
+      color: $GRN;
+    }
+  }
+
+  // ___ Text Overflow ___
+  &-truncate {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  &-ellipsis {
+    text-overflow: ellipsis;
+  }
+  &-clip {
+    text-overflow: clip;
+  }
+}
+
+// ___ Whitespace ___
+.whitespace {
+  white-space: normal;
+
+  &-nowrap {
+    white-space: nowrap;
+  }
+  &-pre {
+    white-space: pre;
+  }
+  &-pre-line {
+    white-space: pre-line;
+  }
+  &-pre-wrap {
+    white-space: pre-wrap;
+  }
+}
+
+// ___ Word Break ___
+.break {
+  overflow-wrap: normal;
+  word-break: normal;
+
+  &-words {
+    overflow-wrap: break-word;
+  }
+  &-all {
+    word-break: break-all;
+  }
+  &-keep {
+    word-break: keep-all;
+  }
+}
+
+
+
+

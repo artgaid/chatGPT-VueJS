@@ -1,0 +1,21 @@
+.grid {
+
+  // ___ Grid Auto Flow ___
+  &-flow-row { grid-auto-flow: row; }
+  &-flow-col { grid-auto-flow: column; }
+  &-flow-dense { grid-auto-flow: dense; }
+  &-flow-row-dense { grid-auto-flow: row dense; }
+  &-flow-col-dense { grid-auto-flow: column dense; }
+
+  // ___ Grid Auto Columns ___
+  &-auto-cols-auto { grid-auto-columns: auto; }
+  &-auto-cols-min { grid-auto-columns: min-content; }
+  &-auto-cols-max { grid-auto-columns: max-content; }
+  &-auto-cols-fr { grid-auto-columns: minmax(0, 1fr); }
+  
+  // ___ Grid Auto Rows ___
+  &-auto-rows-auto { grid-auto-rows: auto; }
+  &-auto-rows-min { grid-auto-rows: min-content; }
+  &-auto-rows-max { grid-auto-rows: max-content; }
+  &-auto-rows-fr { grid-auto-rows: minmax(0, 1fr); }
+}

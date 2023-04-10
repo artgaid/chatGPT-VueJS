@@ -1,0 +1,61 @@
+.place {
+  // ___ Place Content ___
+  &-content-center {
+    place-content: center;
+  }
+  &-content-start {
+    place-content: start;
+  }
+  &-content-end {
+    place-content: end;
+  }
+  &-content-between {
+    place-content: space-between;
+  }
+  &-content-around {
+    place-content: space-around;
+  }
+  &-content-evenly {
+    place-content: space-evenly;
+  }
+  &-content-baseline {
+    place-content: baseline;
+  }
+  &-content-stretch {
+    place-content: stretch;
+  }
+
+  // ___ Place Items ___
+  &-items-start {
+    place-items: start;
+  }
+  &-items-end {
+    place-items: end;
+  }
+  &-items-center {
+    place-items: center;
+  }
+  &-items-baseline {
+    place-items: baseline;
+  }
+  &-items-stretch {
+    place-items: stretch;
+  }
+
+  // ___ Place Self ___
+  &-self-auto {
+    place-self: auto;
+  }
+  &-self-start {
+    place-self: start;
+  }
+  &-self-end {
+    place-self: end;
+  }
+  &-self-center {
+    place-self: center;
+  }
+  &-self-stretch {
+    place-self: stretch;
+  }
+}

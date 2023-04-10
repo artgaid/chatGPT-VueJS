@@ -1,0 +1,69 @@
+.bg {
+
+  &-inherit {
+    background-color: inherit;
+  }
+  &-current {
+    background-color: currentColor;
+  }
+  &-transparent {
+    background-color: transparent;
+  }
+
+
+  &-wht {
+    background-color: $WHT;
+  }
+  &-lllgr {
+    background-color: $LLLGR;
+  }
+  &-llgr {
+    background-color: $LLGR;
+  }
+  &-wbl1 {
+    background-color: $WBL1;
+  }
+  &-lgr {
+    background-color: $LGR;
+  }
+  &-wrd {
+    background-color: $WRD;
+  }
+  &-wgr {
+    background-color: $WGR;
+  }
+  &-wyl {
+    background-color: $WYL;
+  }
+  &-yl {
+    background-color: $YL;
+  }
+  &-gr {
+    background-color: $GR;
+  }
+  &-gr1 {
+    background-color: $GR1;
+  }
+  &-gr2 {
+    background-color: $GR2;
+  }
+  &-dg {
+    background-color: $DG;
+  }
+  &-gr3 {
+    background-color: $GR3;
+  }
+  &-blc {
+    background-color: $BLC;
+  }
+
+  &-bl {
+    background-color: $BL;
+  }
+  &-red {
+    background-color: $RD;
+  }
+  &-grn {
+    background-color: $GRN;
+  }
+}
