@@ -21,3 +21,8 @@ export interface UsageAnswerType {
   prompt_tokens: number
   total_tokens: number
 }
+
+export interface MessageType {
+  sender: 'user' | 'bot' | 'error'
+  text: string
+}

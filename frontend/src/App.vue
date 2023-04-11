@@ -1,18 +1,21 @@
 <script setup lang="ts">
 import { RouterView } from 'vue-router'
-import IconGPTLogo from '@/components/icons/IconGPTLogo.vue'
+import TheFooter from '@/components/TheFooter.vue'
+import TheHeader from '@/components/TheHeader.vue'
 </script>
 
 <template>
-  <header>
-    <div class="w-9 h-9">
-      <IconGPTLogo />
-    </div>
-
-    <h1 class="text-color-bl">gpt-3.5-turbo</h1>
+  <header class="container">
+    <TheHeader />
   </header>
 
-  <RouterView />
+  <main class="container py-24">
+    <RouterView />
+  </main>
+
+  <footer class="container">
+    <TheFooter />
+  </footer>
 </template>
 
 <style lang="scss">
@@ -20,8 +23,8 @@ import IconGPTLogo from '@/components/icons/IconGPTLogo.vue'
   width: 100%;
   height: 100vh;
 
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-auto-rows: 60px 1fr 60px;
 }
 
 header {
@@ -30,10 +33,19 @@ header {
   justify-content: left;
   align-items: center;
   grid-gap: 10px;
+}
 
-  background-color: $WHT;
+main {
+  width: 100%;
+  height: 100%;
 
-  padding: 10px 52px;
+  display: grid;
+  grid-template-rows: 1fr 200px;
+  align-items: center;
+  justify-items: start;
+  grid-gap: 10px;
+
+  overflow: hidden;
 
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.04), 0 0 2px rgba(0, 0, 0, 0.06),
     0 0 1px rgba(0, 0, 0, 0.04), 0 4px 8px rgba(0, 0, 0, 0.04), 0 0 2px rgba(0, 0, 0, 0.06),

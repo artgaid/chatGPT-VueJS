@@ -1,41 +1,30 @@
 <template>
-  <form class="form-request" @submit.prevent="fetchAnswer">
-    <textarea v-model="question" placeholder="Ask VueChatGPT" />
-    <button type="submit">Submit</button>
+  <form class="form-request" @submit.prevent="sendMessage">
+    <textarea
+      v-model="chatGPTStore.userInput"
+      @keyup.enter.prevent="sendMessage"
+      type="text"
+      placeholder="Ask VueChatGPT"
+      :disabled="chatGPTStore.isLoading"
+    />
+    <button type="submit" :disabled="chatGPTStore.isLoading">
+      <TheLoader v-if="chatGPTStore.isLoading" :color="'green'" :size="'xs'" />
+      <span v-else>Submit</span>
+    </button>
   </form>
 </template>
 
 <script lang="ts" setup>
-import axios from 'axios'
-import type { AnswerType } from '@/types/answer.type'
-import { ref } from 'vue'
+import { useChatGPTStore } from '@/stores/chatGPT'
+import TheLoader from '@/components/TheLoader.vue'
+import { onMounted } from 'vue'
 
-const answer = ref({} as AnswerType)
-const question = ref('')
-const isLoading = ref(false)
-const fetchAnswer = async () => {
-  isLoading.value = true
+const chatGPTStore = useChatGPTStore()
+const { sendMessage, getModels } = chatGPTStore
 
-  const res = await axios.post(
-    'https://api.openai.com/v1/chat/completions',
-    {
-      model: 'gpt-3.5-turbo',
-      messages: [{ role: 'user', content: question.value }]
-    },
-    {
-      headers: {
-        'Content-Type': 'application/json',
-        Authorization: `Bearer ${import.meta.env.VITE_OPENAI_API_KEY}`
-      }
-    }
-  )
-
-  answer.value = res.data as AnswerType
-
-  console.log(res, ':res')
-
-  isLoading.value = false
-}
+onMounted(() => {
+  getModels()
+})
 </script>
 
 <style scoped lang="scss">
@@ -48,11 +37,11 @@ const fetchAnswer = async () => {
     width: 100%;
     height: 100px;
 
-    //border: none;
-    border: 1px solid black;
+    border: 1px solid $LGR;
     border-radius: 0.25rem;
     background-color: $LLLGR;
 
+    transition: all 0.2s ease;
     padding: 10px;
 
     &::placeholder {
@@ -61,9 +50,27 @@ const fetchAnswer = async () => {
       font-size: 14px;
       line-height: 18px;
       letter-spacing: 0.2px;
+      color: $GR;
 
-      /* GR1 */
-      color: #989898;
+      transition: all 0.2s ease;
+    }
+
+    &:disabled {
+      pointer-events: none;
+      color: transparent;
+      background-color: $LLLGR;
+
+      &::placeholder {
+        color: transparent;
+      }
+    }
+
+    &:hover {
+      border: 1px solid $GR;
+
+      textarea::placeholder {
+        color: $GR1;
+      }
     }
   }
 
@@ -71,15 +78,24 @@ const fetchAnswer = async () => {
     width: 150px;
     height: auto;
 
+    color: $GR1;
+    border: 1px solid $LGR;
     border-radius: 0.25rem;
 
     transition: all 0.3s ease;
 
     margin-left: 5px;
 
+    &:disabled {
+      pointer-events: none;
+      color: $LGR;
+      background-color: $LLLGR;
+    }
+
     &:hover {
-      color: $BL;
-      box-shadow: inset 150px 0 0 0 $WBL1;
+      color: $GRN;
+      border: 1px solid $GRN;
+      box-shadow: inset 150px 0 0 0 $GRN10;
     }
   }
 }
